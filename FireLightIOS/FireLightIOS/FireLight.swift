@@ -1,13 +1,14 @@
-import LedControl
-import DeviceList
-
-
 class Firelight
 {
-	var mode :bool = true
+	var mode : Int = 1
 	var LedManager :LedControl
 	var DeviceManager :DeviceList
 	
+    init()
+    {
+        LedManager = LedControl(demo : mode)
+        DeviceManager = DeviceList()
+    }
  
 
 

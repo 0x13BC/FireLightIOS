@@ -1,5 +1,5 @@
 
-struct Device : Equatable
+struct Device
 {
 	var name : String
 	var adress : String
@@ -7,8 +7,14 @@ struct Device : Equatable
 
 class DeviceList
 {
-	var Devices :[Device]
-
+	
+    var Devices :[Device]
+    
+    init()
+    {
+        self.Devices = [Device]()
+    }
+    
 	func pairedDeviceList()
 	{
 
