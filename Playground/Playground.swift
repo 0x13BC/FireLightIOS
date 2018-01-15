@@ -2,41 +2,47 @@
 
 //import CoreBluetooth
 
-//#Region ConnectionBl.swift
+//#Region ConnectionBl.swift -CB
 class ConnectionBl
 {
-	var name : String
-	var adress : String
+	static let ALERT_DISCONNECTED = "Device has been Disconnected"
+	static let I_M_HERE = "You are here"
+	static let ERR = "Error during proccess"
 
-    init(name : String, adress : String)
+	var name : String
+	var address : String
+
+    init(name : String, address : String)
     {
         self.name=name
-        self.adress=adress
+        self.address=address
     }
     init()
     {
         name = ""
-        adress = ""
+        address = ""
     }
 	
 	func Connect()
 	{
+		print("Device: \(name) with the address \(address) is Connected. ")
 
 	}
 
 	func Disconnect()
 	{
-
+		print("Device: \(name) with the address \(address) is Disconnected.")
 	}
 
 	func Message()
 	{
 
+
 	}
 
-	func send()
+	func send<T>(value a: T )
 	{
-
+		print()
 	}
 
 	func receive()
@@ -51,25 +57,33 @@ class ConnectionBl
 }
 //#EndRegion
 
-//#Region DeviceList.swift
-struct Device
+//#Region DeviceList.swift -DL
+struct Device: Equatable
 {
 	var name : String
-	var adress : String
+	var address : String
+
+	public static func ==(lhs: Device, rhs: Device) -> Bool {
+        return lhs.name == rhs.name && lhs.address == rhs.address
+    }
 }
 
 
 class DeviceList
 {
 	
-    var Devices :[Device]
+    var devices :[Device]
     
-    init(mode demo: int)
+    init(mode demo: Bool)
     {
-        self.Devices = [Device]()
-        if mode == 1
+        self.devices = []
+        if demo
         {
-
+        	for i in 0...20 {
+                let r = Device(name: "Device \(i)", address: "\(i).\(i).\(i).\(i)")
+                print("\(r.name):\(r.address) has been added")
+                devices.append(r)
+            }
         }
     }
     
@@ -91,10 +105,37 @@ class DeviceList
 
 	}
 
+	func add(_ newDevice: Device) {
+        devices.append(newDevice)
+    }
+
+    func list() -> [Device] {
+
+        for d in devices {
+            print(d.name)
+            print(d.address)
+        }
+
+        return devices
+    }
+
+    func remove(_ toto: Device) {
+
+        if let index = devices.index(of: toto) {
+            remove(at: index)
+        } else {
+            print("device not in array")
+        }
+    }
+
+    func remove(at index: Int) {
+        devices.remove(at: index)
+    }
+
 }
 //#EndRegion
 
-//#Region LedControl.swift
+//#Region LedControl.swift -LC
 class LedControl 
 { 
 	var RGB :[UInt8] = [255,255,255]
@@ -104,9 +145,9 @@ class LedControl
 
 	var BluetoothManager :ConnectionBl
     
-    init(mode demo : Int)
+    init(mode demo : Bool)
     {
-        if demo == 1
+        if demo
         {
             BluetoothManager = ConnectionBl()
         }
@@ -143,28 +184,42 @@ class LedControl
 }
 //#EndRegion
 
-//Region Firelight
+//Region Firelight -FL
 class Firelight
 {
-	var demo : int = 0
-	var LedManager :LedControl = LedControl(mode : demo)
-	var DeviceManager :DeviceList = DeviceList(mode : demo)
+	var demo : Bool = true
+	var LedManager :LedControl 
+	var DeviceManager :DeviceList 
 	
     init()
     {
+    	LedManager = LedControl(mode :demo)
+    	DeviceManager = DeviceList(mode :demo)
+    }
+    init(demo : Bool)
+    {
+    	self.demo = demo
+    	LedManager = LedControl(mode :demo)
+    	DeviceManager = DeviceList(mode :demo)
+    }
+
+    func dispList()
+    {
+    	let _ = DeviceManager.list()
     }
     
  
 }
 //#EndRegion
 
-class Test
+class Test // -Test
 {
 	public static func run()
     {
-
+    	let app: Firelight = Firelight()
+    	app.dispList()
     }
 }
 
 
-
+Test.run()
