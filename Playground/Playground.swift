@@ -119,9 +119,42 @@ class DeviceList
         return devices
     }
 
-    func remove(_ toto: Device) {
+  //   func select(addressOf name: String) -> Device{
 
-        if let index = devices.index(of: toto) {
+		// var find = false
+		// var index: Bool
+		// repeat {
+  //       if index = devices.index(where: {$0.name == name}) {
+  //         find = true  
+  //       } else {
+  //           print("device not in array")
+  //       }
+  //   	}while find != true
+
+  //      	return devices[index]
+  //      }
+
+  //   func select(nameOf address: String) -> Device{
+
+  //   	var find = false
+  //   	var index: Bool
+  //   	repeat{
+  //       if  index = devices.index(where: {$0.address == address}) {
+  //         find = true  
+  //       } else {
+  //           print("device not in array")
+  //       }
+  //   	}while find != true
+
+  //      	return devices[index]
+  //   }
+    func select(at index: Int) -> Device{
+       return devices[index]
+    }
+
+    func remove(_ device: Device) {
+
+        if let index = devices.index(of: device) {
             remove(at: index)
         } else {
             print("device not in array")
@@ -207,6 +240,16 @@ class Firelight
     {
     	let _ = DeviceManager.list()
     }
+
+    func tolo()
+    {
+    	print("Select the id of a device.")
+    	let type = readLine()
+    	let id = Int(type!)
+    	let selectedDevice = DeviceManager.select(at : id!)
+    	print(selectedDevice.name)
+    	print(selectedDevice.address)
+    } 
     
  
 }
@@ -218,6 +261,8 @@ class Test // -Test
     {
     	let app: Firelight = Firelight()
     	app.dispList()
+    	
+    	app.tolo()
     }
 }
 
