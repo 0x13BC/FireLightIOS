@@ -134,20 +134,31 @@ class DeviceList
   //      	return devices[index]
   //      }
 
-  //   func select(nameOf address: String) -> Device{
+  //  func select(nameOf address: String)throws -> Device  {
 
-  //   	var find = false
-  //   	var index: Bool
-  //   	repeat{
-  //       if  index = devices.index(where: {$0.address == address}) {
-  //         find = true  
-  //       } else {
-  //           print("device not in array")
-  //       }
-  //   	}while find != true
+    	//var find = false
+    	//var index
+    	// repeat{
+     //    if  index = devices.index(where: {$0.address == address}) {
+     //      find = true  
+     //    } else {
+     //        print("device not in array")
+     //    }
+    	// }while find != true
+       	//return devices[index]
 
-  //      	return devices[index]
-  //   }
+  //      	if let found = find(devices.map({ $0.name }), address) {
+  //   let obj = devices[found]
+		// }
+
+		// guard let index = devices.index(where: { $0.name == address })
+		// else {
+		// print("Not found")
+		// }
+		// return devices[index]
+
+    //}
+
     func select(at index: Int) -> Device{
        return devices[index]
     }
@@ -241,11 +252,12 @@ class Firelight
     	let _ = DeviceManager.list()
     }
 
-    func tolo()
+    func pickDevice()
     {
     	print("Select the id of a device.")
-    	let type = readLine()
-    	let id = Int(type!)
+		let s = readLine()
+		let id = Int(s!)
+
     	let selectedDevice = DeviceManager.select(at : id!)
     	print(selectedDevice.name)
     	print(selectedDevice.address)
@@ -262,7 +274,7 @@ class Test // -Test
     	let app: Firelight = Firelight()
     	app.dispList()
     	
-    	app.tolo()
+    	app.pickDevice()
     }
 }
 
