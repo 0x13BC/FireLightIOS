@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B4FF1E32003C641005F484C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF1E22003C641005F484C /* AppDelegate.swift */; };
+		8B4FF1E52003C641005F484C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF1E42003C641005F484C /* RootViewController.swift */; };
+		8B4FF1E72003C641005F484C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF1E62003C641005F484C /* DataViewController.swift */; };
+		8B4FF1E92003C641005F484C /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF1E82003C641005F484C /* ModelController.swift */; };
+		8B4FF1EC2003C641005F484C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4FF1EA2003C641005F484C /* Main.storyboard */; };
+		8B4FF1EE2003C641005F484C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4FF1ED2003C641005F484C /* Assets.xcassets */; };
+		8B4FF1F12003C641005F484C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4FF1EF2003C641005F484C /* LaunchScreen.storyboard */; };
+		8B4FF1FC2003C641005F484C /* FireLightIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF1FB2003C641005F484C /* FireLightIOSTests.swift */; };
+		8B4FF2072003C641005F484C /* FireLightIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF2062003C641005F484C /* FireLightIOSUITests.swift */; };
+		8B4FF2192003C790005F484C /* ConnectionBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF2182003C790005F484C /* ConnectionBI.swift */; };
+		8B4FF21B2003C797005F484C /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF21A2003C797005F484C /* DeviceList.swift */; };
+		8B4FF21D2003C7A2005F484C /* FireLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF21C2003C7A2005F484C /* FireLight.swift */; };
+		8B4FF21F2003C7AA005F484C /* LedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FF21E2003C7AA005F484C /* LedControl.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B4FF1F82003C641005F484C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B4FF1D72003C641005F484C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B4FF1DE2003C641005F484C;
+			remoteInfo = FireLightIOS;
+		};
+		8B4FF2032003C641005F484C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B4FF1D72003C641005F484C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B4FF1DE2003C641005F484C;
+			remoteInfo = FireLightIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B4FF1DF2003C641005F484C /* FireLightIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireLightIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4FF1E22003C641005F484C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B4FF1E42003C641005F484C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		8B4FF1E62003C641005F484C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		8B4FF1E82003C641005F484C /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		8B4FF1EB2003C641005F484C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B4FF1ED2003C641005F484C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B4FF1F02003C641005F484C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B4FF1F22003C641005F484C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4FF1F72003C641005F484C /* FireLightIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireLightIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4FF1FB2003C641005F484C /* FireLightIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireLightIOSTests.swift; sourceTree = "<group>"; };
+		8B4FF1FD2003C641005F484C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4FF2022003C641005F484C /* FireLightIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireLightIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4FF2062003C641005F484C /* FireLightIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireLightIOSUITests.swift; sourceTree = "<group>"; };
+		8B4FF2082003C641005F484C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4FF2182003C790005F484C /* ConnectionBI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionBI.swift; sourceTree = "<group>"; };
+		8B4FF21A2003C797005F484C /* DeviceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
+		8B4FF21C2003C7A2005F484C /* FireLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireLight.swift; sourceTree = "<group>"; };
+		8B4FF21E2003C7AA005F484C /* LedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedControl.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B4FF1DC2003C641005F484C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FF1F42003C641005F484C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FF1FF2003C641005F484C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B4FF1D62003C641005F484C = {
+			isa = PBXGroup;
+			children = (
+				8B4FF1E12003C641005F484C /* FireLightIOS */,
+				8B4FF1FA2003C641005F484C /* FireLightIOSTests */,
+				8B4FF2052003C641005F484C /* FireLightIOSUITests */,
+				8B4FF1E02003C641005F484C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B4FF1E02003C641005F484C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FF1DF2003C641005F484C /* FireLightIOS.app */,
+				8B4FF1F72003C641005F484C /* FireLightIOSTests.xctest */,
+				8B4FF2022003C641005F484C /* FireLightIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B4FF1E12003C641005F484C /* FireLightIOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FF21E2003C7AA005F484C /* LedControl.swift */,
+				8B4FF21C2003C7A2005F484C /* FireLight.swift */,
+				8B4FF21A2003C797005F484C /* DeviceList.swift */,
+				8B4FF2182003C790005F484C /* ConnectionBI.swift */,
+				8B4FF1E22003C641005F484C /* AppDelegate.swift */,
+				8B4FF1E42003C641005F484C /* RootViewController.swift */,
+				8B4FF1E62003C641005F484C /* DataViewController.swift */,
+				8B4FF1E82003C641005F484C /* ModelController.swift */,
+				8B4FF1EA2003C641005F484C /* Main.storyboard */,
+				8B4FF1ED2003C641005F484C /* Assets.xcassets */,
+				8B4FF1EF2003C641005F484C /* LaunchScreen.storyboard */,
+				8B4FF1F22003C641005F484C /* Info.plist */,
+			);
+			path = FireLightIOS;
+			sourceTree = "<group>";
+		};
+		8B4FF1FA2003C641005F484C /* FireLightIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FF1FB2003C641005F484C /* FireLightIOSTests.swift */,
+				8B4FF1FD2003C641005F484C /* Info.plist */,
+			);
+			path = FireLightIOSTests;
+			sourceTree = "<group>";
+		};
+		8B4FF2052003C641005F484C /* FireLightIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FF2062003C641005F484C /* FireLightIOSUITests.swift */,
+				8B4FF2082003C641005F484C /* Info.plist */,
+			);
+			path = FireLightIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B4FF1DE2003C641005F484C /* FireLightIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B4FF20B2003C641005F484C /* Build configuration list for PBXNativeTarget "FireLightIOS" */;
+			buildPhases = (
+				8B4FF1DB2003C641005F484C /* Sources */,
+				8B4FF1DC2003C641005F484C /* Frameworks */,
+				8B4FF1DD2003C641005F484C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireLightIOS;
+			productName = FireLightIOS;
+			productReference = 8B4FF1DF2003C641005F484C /* FireLightIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B4FF1F62003C641005F484C /* FireLightIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B4FF20E2003C641005F484C /* Build configuration list for PBXNativeTarget "FireLightIOSTests" */;
+			buildPhases = (
+				8B4FF1F32003C641005F484C /* Sources */,
+				8B4FF1F42003C641005F484C /* Frameworks */,
+				8B4FF1F52003C641005F484C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B4FF1F92003C641005F484C /* PBXTargetDependency */,
+			);
+			name = FireLightIOSTests;
+			productName = FireLightIOSTests;
+			productReference = 8B4FF1F72003C641005F484C /* FireLightIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B4FF2012003C641005F484C /* FireLightIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B4FF2112003C641005F484C /* Build configuration list for PBXNativeTarget "FireLightIOSUITests" */;
+			buildPhases = (
+				8B4FF1FE2003C641005F484C /* Sources */,
+				8B4FF1FF2003C641005F484C /* Frameworks */,
+				8B4FF2002003C641005F484C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B4FF2042003C641005F484C /* PBXTargetDependency */,
+			);
+			name = FireLightIOSUITests;
+			productName = FireLightIOSUITests;
+			productReference = 8B4FF2022003C641005F484C /* FireLightIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B4FF1D72003C641005F484C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ynov;
+				TargetAttributes = {
+					8B4FF1DE2003C641005F484C = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					8B4FF1F62003C641005F484C = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8B4FF1DE2003C641005F484C;
+					};
+					8B4FF2012003C641005F484C = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8B4FF1DE2003C641005F484C;
+					};
+				};
+			};
+			buildConfigurationList = 8B4FF1DA2003C641005F484C /* Build configuration list for PBXProject "FireLightIOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B4FF1D62003C641005F484C;
+			productRefGroup = 8B4FF1E02003C641005F484C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B4FF1DE2003C641005F484C /* FireLightIOS */,
+				8B4FF1F62003C641005F484C /* FireLightIOSTests */,
+				8B4FF2012003C641005F484C /* FireLightIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B4FF1DD2003C641005F484C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FF1F12003C641005F484C /* LaunchScreen.storyboard in Resources */,
+				8B4FF1EE2003C641005F484C /* Assets.xcassets in Resources */,
+				8B4FF1EC2003C641005F484C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FF1F52003C641005F484C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FF2002003C641005F484C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B4FF1DB2003C641005F484C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FF1E52003C641005F484C /* RootViewController.swift in Sources */,
+				8B4FF21F2003C7AA005F484C /* LedControl.swift in Sources */,
+				8B4FF1E92003C641005F484C /* ModelController.swift in Sources */,
+				8B4FF1E72003C641005F484C /* DataViewController.swift in Sources */,
+				8B4FF21D2003C7A2005F484C /* FireLight.swift in Sources */,
+				8B4FF21B2003C797005F484C /* DeviceList.swift in Sources */,
+				8B4FF1E32003C641005F484C /* AppDelegate.swift in Sources */,
+				8B4FF2192003C790005F484C /* ConnectionBI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FF1F32003C641005F484C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FF1FC2003C641005F484C /* FireLightIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FF1FE2003C641005F484C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FF2072003C641005F484C /* FireLightIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B4FF1F92003C641005F484C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B4FF1DE2003C641005F484C /* FireLightIOS */;
+			targetProxy = 8B4FF1F82003C641005F484C /* PBXContainerItemProxy */;
+		};
+		8B4FF2042003C641005F484C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B4FF1DE2003C641005F484C /* FireLightIOS */;
+			targetProxy = 8B4FF2032003C641005F484C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B4FF1EA2003C641005F484C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B4FF1EB2003C641005F484C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B4FF1EF2003C641005F484C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B4FF1F02003C641005F484C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B4FF2092003C641005F484C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B4FF20A2003C641005F484C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B4FF20C2003C641005F484C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FireLightIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLightIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B4FF20D2003C641005F484C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FireLightIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLightIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B4FF20F2003C641005F484C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FireLightIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLightIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireLightIOS.app/FireLightIOS";
+			};
+			name = Debug;
+		};
+		8B4FF2102003C641005F484C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FireLightIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLightIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireLightIOS.app/FireLightIOS";
+			};
+			name = Release;
+		};
+		8B4FF2122003C641005F484C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FireLightIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLightIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FireLightIOS;
+			};
+			name = Debug;
+		};
+		8B4FF2132003C641005F484C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FireLightIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLightIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FireLightIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B4FF1DA2003C641005F484C /* Build configuration list for PBXProject "FireLightIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FF2092003C641005F484C /* Debug */,
+				8B4FF20A2003C641005F484C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B4FF20B2003C641005F484C /* Build configuration list for PBXNativeTarget "FireLightIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FF20C2003C641005F484C /* Debug */,
+				8B4FF20D2003C641005F484C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B4FF20E2003C641005F484C /* Build configuration list for PBXNativeTarget "FireLightIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FF20F2003C641005F484C /* Debug */,
+				8B4FF2102003C641005F484C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B4FF2112003C641005F484C /* Build configuration list for PBXNativeTarget "FireLightIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FF2122003C641005F484C /* Debug */,
+				8B4FF2132003C641005F484C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B4FF1D72003C641005F484C /* Project object */;
+}

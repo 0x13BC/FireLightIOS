@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  FireLightIOS
 //
-//  Created by Bezançon on 16/01/2018.
-//  Copyright © 2018 FireLight. All rights reserved.
+//  Created by Developer on 08/01/2018.
+//  Copyright © 2018 ynov. All rights reserved.
 //
 
 import UIKit
