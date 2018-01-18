@@ -1,6 +1,6 @@
 import Foundation
 
-class Firelight
+public class Firelight
 {
     var demo : Bool = true
     var LedManager :LedControl

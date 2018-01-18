@@ -48,8 +48,8 @@
 		9C590919200E4F69006512EB = {
 			isa = PBXGroup;
 			children = (
-				9C590924200E4F69006512EB /* FireLightIOS */,
 				9C590923200E4F69006512EB /* Products */,
+				9C590924200E4F69006512EB /* FireLightIOS */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,6 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FireLightIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLight.FireLightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,6 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FireLightIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ynov.FireLight.FireLightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
