@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B270F9920123D09002179EB /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B270F9820123D09002179EB /* DeviceListViewController.swift */; };
+		8B270F9D20123EE4002179EB /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B270F9C20123EE4002179EB /* DeviceViewController.swift */; };
 		9C590926200E4F69006512EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C590925200E4F69006512EB /* AppDelegate.swift */; };
 		9C590928200E4F69006512EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C590927200E4F69006512EB /* ViewController.swift */; };
 		9C59092B200E4F69006512EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C590929200E4F69006512EB /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B270F9820123D09002179EB /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		8B270F9C20123EE4002179EB /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		9C590922200E4F69006512EB /* FireLightIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireLightIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C590925200E4F69006512EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C590927200E4F69006512EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B270F9E20123EF4002179EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C590927200E4F69006512EB /* ViewController.swift */,
+				8B270F9820123D09002179EB /* DeviceListViewController.swift */,
+				8B270F9C20123EE4002179EB /* DeviceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		9C590919200E4F69006512EB = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +78,10 @@
 		9C590924200E4F69006512EB /* FireLightIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8B270F9E20123EF4002179EB /* ViewController */,
 				9C590946200E5189006512EB /* Styles */,
 				9C590945200E5180006512EB /* Ressources */,
 				9C590925200E4F69006512EB /* AppDelegate.swift */,
-				9C590927200E4F69006512EB /* ViewController.swift */,
 				9C590929200E4F69006512EB /* Main.storyboard */,
 				9C59092C200E4F69006512EB /* Assets.xcassets */,
 				9C59092E200E4F69006512EB /* LaunchScreen.storyboard */,
@@ -171,9 +185,11 @@
 				9C590928200E4F69006512EB /* ViewController.swift in Sources */,
 				9C590940200E5177006512EB /* FireLight.swift in Sources */,
 				9C590942200E5177006512EB /* RoundColorButton.swift in Sources */,
+				8B270F9920123D09002179EB /* DeviceListViewController.swift in Sources */,
 				9C590926200E4F69006512EB /* AppDelegate.swift in Sources */,
 				9C590943200E5177006512EB /* LedControl.swift in Sources */,
 				9C590944200E5177006512EB /* DeviceList.swift in Sources */,
+				8B270F9D20123EE4002179EB /* DeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
