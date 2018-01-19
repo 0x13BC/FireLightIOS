@@ -5,13 +5,13 @@
 //#Region ConnectionBl.swift -CB
 class ConnectionBl
 {
-	static let ALERT_DISCONNECTED = "Device has been Disconnected"
-	static let I_M_HERE = "You are here"
-	static let ERR = "Error during proccess"
-
-	var name : String
-	var address : String
-
+    static let ALERT_DISCONNECTED = "Device has been Disconnected"
+    static let I_M_HERE = "You are here"
+    static let ERR = "Error during proccess"
+    
+    var name : String
+    var address : String
+    
     init(name : String, address : String)
     {
         self.name=name
@@ -22,48 +22,70 @@ class ConnectionBl
         name = ""
         address = ""
     }
-	
-	func Connect()
-	{
-		print("Device: \(name) with the address \(address) is Connected. ")
-
-	}
-
-	func Disconnect()
-	{
-		print("Device: \(name) with the address \(address) is Disconnected.")
-	}
-
-	func Message()
-	{
-
-
-	}
-
-	func send<T>(value a: T )
-	{
-		print()
-	}
-
-	func receive()
-	{
-		
-	}
-	
-	func TestConnect()
-	{
-
-	}
+    init(_ device :Device)
+    {
+        self.name = device.name
+        self.address = device.address
+    }
+    
+    func Connect()
+    {
+        print("Device: \(name) with the address: \(address) is Connected. ")
+        
+    }
+    
+    func Disconnect()
+    {
+        print("Device: \(name) with the address: \(address) is Disconnected.")
+    }
+    
+    func Message()
+    {
+        print("Lol")
+        
+    }
+    
+    func send<T>(value a: T )
+    {
+        print("\(a) was sent.")
+    }
+    
+    func receive() -> String
+    {
+        let data = readLine()
+        return data!
+    }
+    
+    func TestConnect()
+    {
+        let test = "Ping!"
+        self.send(value: test)
+        print("waiting response...")
+        if self.receive() == "Pong!"
+        {
+            print("Connection is okay")
+        }
+        else
+        {
+            print("Connection problem")
+        }
+    }
+    
+    static public func demo()
+    {
+        print("This is the demo")
+    }
 }
+
 //#EndRegion
 
 //#Region DeviceList.swift -DL
 struct Device: Equatable
 {
-	var name : String
-	var address : String
-
-	public static func ==(lhs: Device, rhs: Device) -> Bool {
+    var name : String
+    var address : String
+    
+    public static func ==(lhs: Device, rhs: Device) -> Bool {
         return lhs.name == rhs.name && lhs.address == rhs.address
     }
 }
@@ -71,7 +93,7 @@ struct Device: Equatable
 
 class DeviceList
 {
-	
+    
     var devices :[Device]
     
     init(mode demo: Bool)
@@ -79,7 +101,7 @@ class DeviceList
         self.devices = []
         if demo
         {
-        	for i in 0...20 {
+            for i in 0...20 {
                 let r = Device(name: "Device \(i)", address: "\(i).\(i).\(i).\(i)")
                 print("\(r.name):\(r.address) has been added")
                 devices.append(r)
@@ -87,107 +109,108 @@ class DeviceList
         }
     }
     
-	func pairedDeviceList()
-	{
-
-	}
-
-	func listListener()
-	{
-
-	}
-	static func demo()
-	{
-
-	}
-	func listGenerator()
-	{
-
-	}
-
-	func add(_ newDevice: Device) {
+    func pairedDeviceList()
+    {
+        
+    }
+    
+    func listListener()
+    {
+        
+    }
+    static func demo()
+    {
+        
+    }
+    func listGenerator()
+    {
+        
+    }
+    
+    func add(_ newDevice: Device) {
         devices.append(newDevice)
     }
-
+    
     func list() -> [Device] {
-
+        
         for d in devices {
             print(d.name)
             print(d.address)
         }
-
+        
         return devices
     }
-
-  //   func select(addressOf name: String) -> Device{
-
-		// var find = false
-		// var index: Bool
-		// repeat {
-  //       if index = devices.index(where: {$0.name == name}) {
-  //         find = true  
-  //       } else {
-  //           print("device not in array")
-  //       }
-  //   	}while find != true
-
-  //      	return devices[index]
-  //      }
-
-  //  func select(nameOf address: String)throws -> Device  {
-
-    	//var find = false
-    	//var index
-    	// repeat{
-     //    if  index = devices.index(where: {$0.address == address}) {
-     //      find = true  
-     //    } else {
-     //        print("device not in array")
-     //    }
-    	// }while find != true
-       	//return devices[index]
-
-  //      	if let found = find(devices.map({ $0.name }), address) {
-  //   let obj = devices[found]
-		// }
-
-		// guard let index = devices.index(where: { $0.name == address })
-		// else {
-		// print("Not found")
-		// }
-		// return devices[index]
-
+    
+    //   func select(addressOf name: String) -> Device{
+    
+    // var find = false
+    // var index: Bool
+    // repeat {
+    //       if index = devices.index(where: {$0.name == name}) {
+    //         find = true
+    //       } else {
+    //           print("device not in array")
+    //       }
+    //       }while find != true
+    
+    //          return devices[index]
+    //      }
+    
+    //  func select(nameOf address: String)throws -> Device  {
+    
+    //var find = false
+    //var index
+    // repeat{
+    //    if  index = devices.index(where: {$0.address == address}) {
+    //      find = true
+    //    } else {
+    //        print("device not in array")
+    //    }
+    // }while find != true
+    //return devices[index]
+    
+    //          if let found = find(devices.map({ $0.name }), address) {
+    //   let obj = devices[found]
+    // }
+    
+    // guard let index = devices.index(where: { $0.name == address })
+    // else {
+    // print("Not found")
+    // }
+    // return devices[index]
+    
     //}
-
+    
     func select(at index: Int) -> Device{
-       return devices[index]
+        return devices[index]
     }
-
+    
     func remove(_ device: Device) {
-
+        
         if let index = devices.index(of: device) {
             remove(at: index)
         } else {
             print("device not in array")
         }
     }
-
+    
     func remove(at index: Int) {
         devices.remove(at: index)
     }
-
+    
 }
+
 //#EndRegion
 
 //#Region LedControl.swift -LC
-class LedControl 
-{ 
-	var RGB :[UInt8] = [255,255,255]
-	var HSL :[Double] = [350,100,100]
-	var modeColors : String = "HSL"   
-	var id = 0
-
-	var BluetoothManager :ConnectionBl
+class LedControl
+{
+    var RGB :[UInt8] = [255,255,255]
+    var HSL :[Double] = [350,100,100]
+    var modeColors : String = "HSL"
+    var id = 0
+    
+    var BluetoothManager :ConnectionBl
     
     init(mode demo : Bool)
     {
@@ -202,79 +225,103 @@ class LedControl
         
         
     }
-	func rgbToHsl()
-	{
-
-	}
-	func HslToRgb()
-	{
-
-	}
-
-	func TurnOffLed()
-	{
-		print("Led is Off")
-	}
-	func TurnOnLed()
-	{
-		print("Led is On")
-
-	}
-	func Wave()
-	{
-		print("Led is waving")
-
-	}
+    func rgbToHsl()
+    {
+        
+    }
+    func HslToRgb()
+    {
+    }
+    
+    func TurnOffLed()
+    {
+        print("Led is Off")
+    }
+    func TurnOnLed()
+    {
+        print("Led is On")
+        
+    }
+    func Wave()
+    {
+        print("Led is waving")
+        
+    }
 }
+
 //#EndRegion
 
 //Region Firelight -FL
+
 class Firelight
 {
-	var demo : Bool = true
-	var LedManager :LedControl 
-	var DeviceManager :DeviceList 
-	
+    var demo : Bool = true
+    var LedManager :LedControl
+    var DeviceManager :DeviceList
+    
+    
     init()
     {
-    	LedManager = LedControl(mode :demo)
-    	DeviceManager = DeviceList(mode :demo)
+        LedManager = LedControl(mode :demo)
+        DeviceManager = DeviceList(mode :demo)
     }
     init(demo : Bool)
     {
-    	self.demo = demo
-    	LedManager = LedControl(mode :demo)
-    	DeviceManager = DeviceList(mode :demo)
+        self.demo = demo
+        LedManager = LedControl(mode :demo)
+        DeviceManager = DeviceList(mode :demo)
     }
-
+    
     func dispList()
     {
-    	let _ = DeviceManager.list()
+        let _ = DeviceManager.list()
     }
-
-    func pickDevice()
-    {
-    	print("Select the id of a device.")
-		let s = readLine()
-		let id = Int(s!)
-
-    	let selectedDevice = DeviceManager.select(at : id!)
-    	print(selectedDevice.name)
-    	print(selectedDevice.address)
-    } 
     
- 
+    func pickDevice() -> Device
+    {
+        print("Select the id of a device.")
+        let s = readLine()
+        let id = Int(s!)
+        
+        let selectedDevice = DeviceManager.select(at : id!)
+        print(selectedDevice.name)
+        print(selectedDevice.address)
+        
+        return selectedDevice
+    }
+    
+    func controlDevice(_ device : Device)
+    {
+        if demo
+        {
+            ConnectionBl.demo()
+            let bluetoothManager = ConnectionBl(device)
+            bluetoothManager.Connect()
+            bluetoothManager.TestConnect()
+            bluetoothManager.send(value: LedManager)
+            
+            bluetoothManager.Disconnect()
+        }
+        else
+        {
+            
+        }
+    }
+    
+    
 }
+
 //#EndRegion
 
-class Test // -Test
+public class Test // -Test
 {
-	public static func run()
+    public static func run()
     {
-    	let app: Firelight = Firelight()
-    	app.dispList()
-    	
-    	app.pickDevice()
+        let app: Firelight = Firelight()
+        app.dispList()
+        
+        let device = app.pickDevice()
+        app.controlDevice(device)
     }
 }
 
