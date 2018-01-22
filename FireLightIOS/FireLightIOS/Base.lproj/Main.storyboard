@@ -124,7 +124,7 @@
         <!--Item 2-->
         <scene sceneID="r76-XL-oTN">
             <objects>
-                <viewController id="TKg-9d-JIh" sceneMemberID="viewController">
+                <viewController id="TKg-9d-JIh" customClass="item2ViewController" customModule="FireLightIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2QZ-r0-HAP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,11 +156,21 @@
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlF-7R-Nvh">
+                                <rect key="frame" x="236" y="57" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.42896485324185385" green="0.51235162641062826" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pzu-Wt-Kyx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="OPC-C8-g6x"/>
+                    <connections>
+                        <outlet property="DeviceName" destination="QlF-7R-Nvh" id="noz-oz-gQT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozt-8E-GYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,6 +269,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="cZf-Zm-zo4"/>
         <segue reference="OoX-SW-C7P"/>
     </inferredMetricsTieBreakers>
 </document>

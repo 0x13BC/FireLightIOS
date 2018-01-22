@@ -1,20 +1,21 @@
 //
-//  DeviceViewController.swift
+//  item2ViewController.swift
 //  FireLightIOS
 //
-//  Created by Developer on 19/01/2018.
+//  Created by Developer on 22/01/2018.
 //  Copyright © 2018 FireLight. All rights reserved.
 //
 
 import UIKit
 
-class DeviceViewController: UITabBarController{
+class item2ViewController: UIViewController {
 
     
-    var nameDevice : String? = ""
+    @IBOutlet weak var DeviceName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DeviceName.text = (self.tabBarController as? DeviceViewController)?.nameDevice
         // Do any additional setup after loading the view.
     }
 

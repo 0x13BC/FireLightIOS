@@ -57,6 +57,12 @@ class DeviceListViewController: UIViewController,UITableViewDataSource  {
     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if let cell = sender as? UITableViewCell {
+            if let DeviceViewControl = segue.destination as? DeviceViewController
+            {
+                DeviceViewControl.nameDevice = cell.textLabel?.text
+            }
+        }
     
     }
 
