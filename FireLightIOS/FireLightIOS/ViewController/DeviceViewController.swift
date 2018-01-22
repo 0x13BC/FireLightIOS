@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeviceViewController: UITabBarController{
+class DeviceViewController: UITabBarController {
 
     
     var nameDevice : String? = ""

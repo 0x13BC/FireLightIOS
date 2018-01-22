@@ -1,6 +1,6 @@
 import CoreBluetooth
 
-class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDelegate 
+class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDelegate
 	{
 
 		var manager: CBCentralManager!
