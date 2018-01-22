@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FireLightIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -49,6 +48,7 @@
                         <outlet property="demoSwitch" destination="eEn-U1-o9j" id="mcX-1m-BIr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-128.98550724637681" y="155.70652173913044"/>
         </scene>
@@ -169,7 +169,7 @@
         <!--Item 1-->
         <scene sceneID="ObR-QT-9ht">
             <objects>
-                <viewController id="jRJ-uS-e2h" sceneMemberID="viewController">
+                <viewController id="jRJ-uS-e2h" customClass="item1ViewController" customModule="FireLightIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T22-VA-MFG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,20 +219,30 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-td-UJv">
+                                <rect key="frame" x="176" y="69" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.42799462752812495" green="0.56284224989999998" blue="0.50437778608437489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6FE-3T-zep"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="7oj-UQ-FrX"/>
+                    <connections>
+                        <outlet property="DeviceName" destination="dvx-td-UJv" id="dS7-dd-FrJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVo-TY-0Pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1820" y="130"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Device View Controller-->
         <scene sceneID="Xoc-Pu-cuP">
             <objects>
-                <tabBarController id="g3D-QQ-Ccb" sceneMemberID="viewController">
+                <tabBarController id="g3D-QQ-Ccb" customClass="DeviceViewController" customModule="FireLightIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="my1-mc-8yp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -249,6 +259,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AV8-eE-NRE"/>
+        <segue reference="OoX-SW-C7P"/>
     </inferredMetricsTieBreakers>
 </document>
