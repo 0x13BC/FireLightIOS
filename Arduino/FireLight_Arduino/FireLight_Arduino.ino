@@ -4,9 +4,10 @@ int color[3]={255,255,255};
 String readString;
 boolean ledon = false;
 
-#define OFF '0'
-#define ON '1'
-#define WAVE '2'
+#define OFF 0
+#define ON 1
+#define WAVE 2
+#define CHOOSE 3
 
 int redPin = 3;   // Red LED,   connected to digital pin 3
 int greenPin = 5;  // Green LED, connected to digital pin 5
@@ -31,8 +32,6 @@ int wait = 10;      // 10ms internal crossFade delay; increase for slower fades
 int hold = 0;       // Optional hold when a color is complete, before the next crossFade
 int DEBUG = 1;      // DEBUG counter; if set to 1, will write values back via serial
 int loopCount = 60; // How often should DEBUG report?
-int repeat = 3;     // How many times should we loop before stopping? (0 for no stop)
-int j = 2;          // Loop counter for repeat
 String mod = "0";
 
 // Initialize color variables
@@ -54,11 +53,12 @@ void loop()
 	if (readString.length() >0) 
 	{  
 		mod = readString;
-		int order = readString.length() - 1;
-		switch (mod[order])
+                Serial.print(mod);
+		switch (strComp(mod))
 		{
 			
 		case OFF:
+                Serial.write("OFF");
 			ledOff();
 			redVal = black[0];
 			grnVal = black[1]; 
@@ -69,6 +69,7 @@ void loop()
 			break;
 			
 		case ON:
+                        Serial.write("ON");
 			ledOn();
 			redVal = white[0];
 			grnVal = white[1]; 
@@ -79,25 +80,68 @@ void loop()
 			break;
 			
 		case WAVE:
-			
-			//while(Serial.available() < 1 ){
+			Serial.write("WAVE");
+			while(Serial.available() < 1 ){
 				crossFade(red);
 				crossFade(green);
 				crossFade(blue);
 				crossFade(yellow);
-				if(repeat) // Do we loop a finite number of times?
-				{
-					j += 1;
-					if (j >= repeat) { // Are we there yet?
-						exit(j);  // If so, stop.
-					}     
-				}
-			//}
-			
-			
+                                }
+                         break;
+                         
+                 case CHOOSE:
+                     Serial.write("CHOOSE");
+                     c=' ';
+                     readString=""; 
+                      int R=0,G=0,B=0,p=0;
+                     while(Serial.available() < 1){			
 		}
+                while(Serial.available())
+                {
+                  delay(3);  
+		c = (char)Serial.read();
+		readString += c;
+                } 
+                String temp="";
+                for(int i=0;i<readString.length();i++)
+                {
+                  
+                  if(readString[i]!='.')
+                  {
+                    temp += readString[i];
+                    if(i== readString.length()-1)
+                    {
+                      B= temp.toInt();
+                    }
+                  }
+                  if(readString[i]=='.')
+                  {
+                    p++;
+                    switch(p){
+                    case 1:
+                      R= temp.toInt();
+                    break;
+                    case 2:
+                      G= temp.toInt();
+                    break;
+                    }
+                    temp="";
+                  }
+                }
+                
+                Serial.print("Rouge");
+                Serial.print(R);
+                Serial.print(" GREEN");
+                Serial.print(G);
+                Serial.print("Bleu");
+                Serial.print(B);
+                setColor(R,G,B);
+                
+
+                break;
+                }
 		
-		Serial.write(c);  
+		//Serial.write(c);  
 		readString="";  
 	} // end if
 }
@@ -128,6 +172,20 @@ void setColor(int red, int green, int blue)
 	analogWrite(greenPin, green);
 	analogWrite(bluePin, blue);  
 }
+
+int strComp(String string){
+  if(string == "OFF")
+    {return 0;}
+  if(string == "ON")
+    {return 1;}
+  if(string == "WAVE")
+    {return 2;}
+   if(string == "CHOOSE")
+    {return 3;}
+   return 0;
+  
+}
+
 
 /// FADE RGB
 

@@ -35,12 +35,12 @@ void loop() {
   }// end while
   if (readString.length() >0) 
   {  
-    if ( readString == "1")
+    if ( readString == "RED")
     {
     
     setColor(255, 0, 0);  // red
   }
-    if ( readString == "0")
+    if ( readString == "DARK")
     {
       setColor(0, 0, 0);  // red
     }
